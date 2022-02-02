@@ -1,5 +1,5 @@
 const express = require('express');
-const port = process.env.PORT || 4000;
+const port = process.env.port || 4000;
 var cors = require('cors')
 
 //importar la base de datos
@@ -20,6 +20,6 @@ app.use('/user' , user );
 app.use('/teams' , teams);
 
 //escucha la app por el puerto 4000
-app.listen( port , () => {
+app.listen( port, '0.0.0.0', () => {
     console.log('listening on port ' + port );
 })
